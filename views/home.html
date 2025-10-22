@@ -11,46 +11,52 @@
   <div class="contact-box">
     <h1>Contact Form</h1>
     <form id="contact-form" action = "#" method = "get">
+      <div class = "row">
         <label for="fname">First Name</label>
-        <input type="text" id="fname"><br>
+        <input type="text" id="fname">
 
         <label for="lname">Last Name</label>
-        <input type="text" id="lname"><br>
+        <input type="text" id="lname">
 
         <label for="jobtitle">Job Title</label>
-        <input type="text" id="jobtitle"><br>
+        <input type="text" id="jobtitle">
+      </div>
 
-        <label for="company">Company:</label>
-        <input type="text" id="company"><br>
+      <div class = "row">
+        <label for="company">Company</label>
+        <input type="text" id="company">
 
-        <label for="linkurl">LinkedIn URL:</label>
-        <input type="text" id="linkurl"><br>
+        <label for="linkurl">LinkedIn URL</label>
+        <input type="text" id="linkurl">
 
-        <label for="email">Email:</label>
-        <input type="email" id="email"><br>
+        <label for="email">Email</label>
+        <input type="email" id="email">
+      </div>
 
-        <p>How did we meet?</p>
+      <div class = "row">
+        <label>How did we meet?</label>
         <select name = "meet" id = "meet">
           <option value = "none">Please select</option>
   	      <option value = "inperson">In-Person</option>
   	      <option value = "online">Online</option>
   	      <option value = "other">Other</option>
-        </select><br>
+        </select>
 
         <label for="other">Other (please specify)</label>
         <input type="text" id="other">
+      </div>
 
-        <p><label for="message">Message</label></p>
-        <textarea id="message" name="message" rows="10" cols="62"></textarea><br>
+      <p><label for="message">Message</label></p>
+      <textarea id="message" name="message" rows="10" cols="110"></textarea>
 
-        <br><label for = "addmail">
-        <input type = "checkbox" id = "addmail" name = "addmail[]" value = "addmail">Please add me to your mailing list</label>
+      <label for = "addmail">
+      <input type = "checkbox" id = "addmail" name = "addmail[]" value = "addmail">Please add me to your mailing list</label><br>
 
-        <p>Choose an email format: </p>
-        <label for = "ehtml">
-        <input type = "radio" id = "ehtml" name = "eformat" value = "ehtml">HTML</label>
-        <label for = "etext">
-        <input type = "radio" id = "etext" name = "format" value = "etext">Text</label>
+      <span>Choose an email format: </span>
+      <label for = "ehtml">
+      <input type = "radio" id = "ehtml" name = "eformat" value = "ehtml">HTML</label>
+      <label for = "etext">
+      <input type = "radio" id = "etext" name = "eformat" value = "etext">Text</label><br>
 
       <button type="submit">Submit</button>
     </form>
