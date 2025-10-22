@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guestbook Form</title>
+  <link rel="stylesheet" href="/styles/contact-form.css">
+  <link rel = "icon" href = "/images/guestbook.png">
+</head>
+<body>
+
+  <div class="contact-box">
+    <h1>Contact Form</h1>
+    <form id="contact-form" action = "#" method = "get">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname"><br>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname"><br>
+
+        <label for="jobtitle">Job Title</label>
+        <input type="text" id="jobtitle"><br>
+
+        <label for="company">Company:</label>
+        <input type="text" id="company"><br>
+
+        <label for="linkurl">LinkedIn URL:</label>
+        <input type="text" id="linkurl"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email"><br>
+
+        <p>How did we meet?</p>
+        <select name = "meet" id = "meet">
+          <option value = "none">Please select</option>
+  	      <option value = "inperson">In-Person</option>
+  	      <option value = "online">Online</option>
+  	      <option value = "other">Other</option>
+        </select><br>
+
+        <label for="other">Other (please specify)</label>
+        <input type="text" id="other">
+
+        <p><label for="message">Message</label></p>
+        <textarea id="message" name="message" rows="10" cols="62"></textarea><br>
+
+        <br><label for = "addmail">
+        <input type = "checkbox" id = "addmail" name = "addmail[]" value = "addmail">Please add me to your mailing list</label>
+
+        <p>Choose an email format: </p>
+        <label for = "ehtml">
+        <input type = "radio" id = "ehtml" name = "eformat" value = "ehtml">HTML</label>
+        <label for = "etext">
+        <input type = "radio" id = "etext" name = "format" value = "etext">Text</label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <a href = "https://github.com/jmakho01/guestbook-form">Github Code Link</a>
+
+  </div>
+
+</body>
+</html>
