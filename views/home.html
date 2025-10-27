@@ -13,45 +13,61 @@
     <h1>Contact Form</h1>
     <form id="contact-form" action = "#" method = "get">
       <div class = "row">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname">
-        <span id = "err-fname" class = "error">First name cannot be empty!</span><br>
+        <div class = "field">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname">
+          <span id = "err-fname" class = "error">First name cannot be empty!</span><br>
+        </div>
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname">
-        <span id = "err-lname" class = "error">Last name cannot be empty!</span><br>
+        <div class = "field">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname">
+          <span id = "err-lname" class = "error">Last name cannot be empty!</span><br>
+        </div>
 
-        <label for="jobtitle">Job Title</label>
-        <input type="text" id="jobtitle">
+        <div class = "field">
+          <label for="jobtitle">Job Title</label>
+          <input type="text" id="jobtitle">
+        </div>
       </div>
 
       <div class = "row">
-        <label for="company">Company</label>
-        <input type="text" id="company">
+        <div class = "field">
+          <label for="company">Company</label>
+          <input type="text" id="company">
+        </div>
 
-        <label for="linkurl">LinkedIn URL</label>
-        <input type="text" id="linkurl" placeholder="https://linkedin.com/in/">
-        <span id = "err-linked" class = "error">LinkedIn URL is incorrect!</span><br>
+        <div class = "field">
+          <label for="linkurl">LinkedIn URL</label>
+          <input type="text" id="linkurl" placeholder="https://linkedin.com/in/">
+          <span id = "err-linked" class = "error">LinkedIn URL is incorrect!</span><br>
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email">
-        <span id = "err-email" class = "error">Email address is incorrect or empty!</span>
+        <div class = "field">
+          <label for="email">Email</label>
+          <input type="email" id="email">
+          <span id = "err-email" class = "error">Email address is incorrect or empty!</span>
+        </div>
       </div>
 
       <div class = "row">
-        <label>How did we meet?</label>
-        <select name = "meet" id = "meet" onchange = "validateMeet()">
-          <option value = "none">Please select</option>
-  	      <option value = "inperson">In-Person</option>
-  	      <option value = "online">Online</option>
-  	      <option value = "other">Other</option>
-        </select>
-        <span id = "err-meet" class = "error">Please select a option!</span><br>
+        <div class = "field">
+          <label>How did we meet?</label>
+          <select name = "meet" id = "meet" onchange = "validateMeet()">
+            <option value = "none">Please select</option>
+  	        <option value = "inperson">In-Person</option>
+  	        <option value = "online">Online</option>
+  	        <option value = "other">Other</option>
+          </select>
+          <span id = "err-meet" class = "error">Please select a option!</span><br>
+        </div>
 
-        <span id = "show-other" class = "show-field"> 
-          <label for="other">Other (please specify)</label>
-          <input type="text" id="other">
-        </span>
+        <div class = "field">
+          <span id = "show-other" class = "show-field"> 
+            <label for="other">Other (please specify)</label>
+            <input type="text" id="other">
+          </span>
+        </div>
       </div>
 
       <p><label for="message">Message</label></p>
@@ -61,7 +77,7 @@
       <input type = "checkbox" id = "addmail" name = "addmail[]" value = "addmail">Please add me to your mailing list</label><br>
 
       <span id = "show-format" class = "show-field">
-        <span>Choose an email format: </span>
+        <span id = "email-format-text">Choose an email format: </span>
         <label for = "ehtml">
         <input type = "radio" id = "ehtml" name = "eformat" value = "ehtml">HTML</label>
         <label for = "etext">
