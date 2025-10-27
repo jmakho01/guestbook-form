@@ -4,6 +4,15 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.error {
+    color: red;
+    display: none;
+}
+
+.show-field {
+    display: none;
+}
     
 .contact-box {
     background: white;
