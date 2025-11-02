@@ -11,41 +11,41 @@
 
   <div class="contact-box">
     <h1>Contact Form</h1>
-    <form id="contact-form" action = "#" method = "get">
+    <form id="contact-form" action = "/submit-order" method = "post">
       <div class = "row">
         <div class = "field">
           <label for="fname">First Name</label>
-          <input type="text" id="fname">
+          <input type="text" id="fname" name="fname">
           <span id = "err-fname" class = "error">First name cannot be empty!</span><br>
         </div>
 
         <div class = "field">
           <label for="lname">Last Name</label>
-          <input type="text" id="lname">
+          <input type="text" id="lname" name="lname">
           <span id = "err-lname" class = "error">Last name cannot be empty!</span><br>
         </div>
 
         <div class = "field">
           <label for="jobtitle">Job Title</label>
-          <input type="text" id="jobtitle">
+          <input type="text" id="jobtitle" name="jobtitle">
         </div>
       </div>
 
       <div class = "row">
         <div class = "field">
           <label for="company">Company</label>
-          <input type="text" id="company">
+          <input type="text" id="company" name="company">
         </div>
 
         <div class = "field">
           <label for="linkurl">LinkedIn URL</label>
-          <input type="text" id="linkurl" placeholder="https://linkedin.com/in/">
+          <input type="text" id="linkurl" name="linkurl" placeholder="https://linkedin.com/in/">
           <span id = "err-linked" class = "error">LinkedIn URL is incorrect!</span><br>
         </div>
 
         <div class = "field">
           <label for="email">Email</label>
-          <input type="email" id="email">
+          <input type="email" id="email" name="email">
           <span id = "err-email" class = "error">Email address is incorrect or empty!</span>
         </div>
       </div>
@@ -65,7 +65,7 @@
         <div class = "field">
           <span id = "show-other" class = "show-field"> 
             <label for="other">Other (please specify)</label>
-            <input type="text" id="other">
+            <input type="text" id="other" name="other">
           </span>
         </div>
       </div>
