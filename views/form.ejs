@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guestbook Form</title>
+  <link rel="stylesheet" href="/styles/contact-form.css">
+  <link rel = "icon" href = "/images/guestbook-icon.png">
+  <script src = "js/guestbook.js" defer></script>
+</head>
+<body>
+  
+  <div class="contact-box">
+    <%- include('partials/nav') %>
+    <h1>Contact Form</h1>
+    <form id="contact-form" action = "/submit-order" method = "post">
+      <div class = "row">
+        <div class = "field">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname">
+          <span id = "err-fname" class = "error">First name cannot be empty!</span><br>
+        </div>
+
+        <div class = "field">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname">
+          <span id = "err-lname" class = "error">Last name cannot be empty!</span><br>
+        </div>
+
+        <div class = "field">
+          <label for="jobtitle">Job Title</label>
+          <input type="text" id="jobtitle" name="jobtitle">
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "field">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company">
+        </div>
+
+        <div class = "field">
+          <label for="linkurl">LinkedIn URL</label>
+          <input type="text" id="linkurl" name="linkurl" placeholder="https://linkedin.com/in/">
+          <span id = "err-linked" class = "error">LinkedIn URL is incorrect!</span><br>
+        </div>
+
+        <div class = "field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <span id = "err-email" class = "error">Email address is incorrect or empty!</span>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "field">
+          <label>How did we meet?</label>
+          <select name = "meet" id = "meet" onchange = "validateMeet()">
+            <option value = "none">Please select</option>
+  	        <option value = "inperson">In-Person</option>
+  	        <option value = "online">Online</option>
+  	        <option value = "other">Other</option>
+          </select>
+          <span id = "err-meet" class = "error">Please select a option!</span><br>
+        </div>
+
+        <div class = "field">
+          <span id = "show-other" class = "show-field"> 
+            <label for="other">Other (please specify)</label>
+            <input type="text" id="other" name="other">
+          </span>
+        </div>
+      </div>
+
+      <p><label for="message">Message</label></p>
+      <textarea id="message" name="message" rows="10" cols="110"></textarea>
+
+      <label for = "addmail">
+      <input type = "checkbox" id = "addmail" name = "addmail[]" value = "addmail">Please add me to your mailing list</label><br>
+
+      <span id = "show-format" class = "show-field">
+        <span id = "email-format-text">Choose an email format: </span>
+        <label for = "ehtml">
+        <input type = "radio" id = "ehtml" name = "eformat" value = "ehtml">HTML</label>
+        <label for = "etext">
+        <input type = "radio" id = "etext" name = "eformat" value = "etext">Text</label><br>
+      </span>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <a href = "https://github.com/jmakho01/guestbook-form">Github Code Link</a>
+
+  </div>
+
+</body>
+</html>
