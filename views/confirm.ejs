@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guestbook Confirm</title>
+  <link rel = "icon" href = "/images/guestbook-icon.png">
+  <link rel="stylesheet" href="/styles/contact-form.css">
+  <script src = "js/guestbook.js" defer></script>
+</head>
+<body>
+
+  <div class="confirm-box">
+    <h1>Thank you for your submission!</h1>
+    <hr>
+    <p>First Name: <%= data.fname %></p>
+    <p>Last Name: <%= data.lname %></p>
+    <p>How we met: 
+      <% if (data.meet === "other" && data.other) { %>
+        Other - <%= data.other %>
+      <% } else { %>
+        <%= data.meet %>
+      <% } %>
+    </p>
+
+    <% if (data.jobtitle && data.jobtitle.trim() !== "") { %>
+      <p>Job Title: <%= data.jobtitle %></p>
+    <% } %>
+
+    <% if (data.company && data.company.trim() !== "") { %>
+      <p>Company: <%= data.company %></p>
+    <% } %>
+
+    <% if (data.linkurl && data.linkurl.trim() !== "") { %>
+      <p>LinkedIn: <%= data.linkurl %></p>
+    <% } %>
+
+    <% if (data.email && data.email.trim() !== "") { %>
+      <p>Email: <%= data.email %></p>
+    <% } %>
+
+    <% if (data.message && data.message.trim() !== "") { %>
+      <p>Message: <%= data.message %></p>
+    <% } %>
+
+    <% if (data.addmail) { %>
+      <p>Mailing List: Subscribed</p>
+      <p>Email Format: <%= data.eformat === 'ehtml' ? 'HTML' : 'Text' %></p>
+    <% } else { %>
+      <p>Mailing List: Not Subscribed</p>
+    <% } %>
+
+    <p>Date Submitted: <%= data.timestamp.toLocaleString() %> </p>
+
+    <a id = "home-button" href = "/" role = "button">Back to Form</a>
+  </div>
+
+</body>
+</html>
