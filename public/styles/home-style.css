@@ -1,0 +1,122 @@
+* {
+    list-style-position: inside;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+a {
+    color: blue;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    background-color: lightseagreen;
+}
+
+a:visited {
+    color: darkblue;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+p {
+    font-size: medium;
+}
+
+img {
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    width: 200px;
+}
+
+body {
+    background-color: skyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+    padding: 10px;
+    width: 70%;
+}
+
+main {
+    background-color: lightblue;
+    border-radius: 20px;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#edu {
+    margin-left: 30px;
+}
+
+#class {
+    margin-right: 30px;
+}
+
+#class h3 {
+    margin-left: 15px;
+}
+
+hr {
+    width: 90%;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+#skills, #exp {
+    margin-left: 30px; 
+    margin-right: 40px;
+    padding-left: 20px;
+}
+
+#exp {
+    padding-bottom: 10px;
+}
+
+li::marker {
+    color: black;
+    font-weight: bold;
+    content: '> ';
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    width: 100%;
+  }
+
+  div {
+    margin-left: 30px; 
+    margin-right: 40px;
+    padding-left: 20px;
+  }
+
+  section {
+    display: block;
+    justify-content: baseline;
+  }
+
+  section div {
+    display: block;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+}
