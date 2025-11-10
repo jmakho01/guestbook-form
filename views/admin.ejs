@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guestbook Admin</title>
+  <link rel = "icon" href = "/images/guestbook-icon.png">
+  <link rel = "stylesheet" href = "/styles/contact-form.css">
+  <link rel = "stylesheet" href = "//cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+  <script src = "js/guestbook.js" defer></script>
+  <script src = "https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src = "//cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+</head>
+<body>
+    <div class = "admin-box">
+      <%- include('partials/nav') %>
+      <h1>Admin Page</h1>
+      <table id = "data-table" class = "display">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>How did we meet?</th>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>LinkedIn URL</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Mailing List</th>
+            <th>Mailing List Format</th>
+            <th>Date/Time Submitted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% datas.forEach(data => { %>
+
+          <tr>
+            <td><%= data.fname %> <%= data.lname %></td>
+            <td><%= data.meet %></td>
+            <td><%= data.jobtitle %></td>
+            <td><%= data.company %></td>
+            <td><%= data.linkurl %></td>
+            <td><%= data.email %></td>
+            <td><%= data.message %></td>
+            <td><%= data.addmail %></td>
+            <td><%= data.eformat %></td>
+            <td><%= data.timestamp.toLocaleString() %></td>
+          </tr>
+
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+    <script defer>
+        let table = new DataTable('#data-table');
+    </script>
+</body>
+</html>
