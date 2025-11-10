@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel = "stylesheet" href = "/styles/home-style.css">
+    <link rel = "icon" href = "/images/resume-icon.png">
+</head>
+<body>
+    <main>
+        <header>
+            <%- include('partials/nav') %>
+            <img src = "/images/portrait.jpg" alt = "A photo of the student" width = 200 height = 200>
+            <h1>Jason Makhovitskiy</h1>
+            <p>Contact: <u>Makhovitskiy.Jason@student.greenriver.edu</u></p>
+            <a href = "https://www.linkedin.com/in/jason-makhovitskiy/">LinkedIn Profile</a>
+            &nbsp;&#124;&nbsp;
+            <a href = "https://github.com/jmakho01">Github Profile</a>
+        </header>
+
+        <hr>
+
+        <section id = "school">
+            <div id = "edu">
+                <h2>Education</h2>
+
+                <p><i>Currently pursuing a Bachelors in Software Development (June 2027)</i></p>
+                <p><b>AAS in Data Analytics and Software Development (2023 – 2025)</b><br>
+                Green River College, Auburn, WA</p>
+            </div>
+
+            <div id = "class">
+                <h3>Classes Taken</h3>
+                <ul>
+                    <li><u>SDEV 106</u> - Front End Web Development</li>
+                    <li><u>SDEV 121</u> - Python for Data Analytics</li>
+                    <li><u>SDEV 201</u> - SQL for Data Analytics</li>
+                    <li><u>SDEV 280</u> - Data Analytics Capstone</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <div id = "skills">
+            <h2>Skills and Certifications</h2>
+            <ul>
+                <li>Languages: Java, Python, JavaScript, SQL, PHP</li>
+                <li>Web: HTML/CSS, Bootstrap, jQuery</li>
+                <li>Tools: Visual Studio Code, jGRASP, Git, Linux</li>
+                <li>Agile: pair programming, working in sprints</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div id = "exp">
+            <h2>Experience</h2>
+            <dl>
+                <dt><b>Capstone project with Statmando / PDGA (April – June 2025)</b></dt>
+                <dd><b>></b> Worked with team to create a system that streamlines park reservations for PDGA
+disk golf tournament organizers</dd>
+                <dd><b>></b> System is used as a starting off point towards a unified tool for park reservations</dd>
+                <dd><b>></b> Did many tasks including web design and backend / API implementations</dd>
+            </dl>
+        </div>
+    </main>
+</body>
+</html>
