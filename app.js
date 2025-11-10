@@ -2,6 +2,8 @@ import express from 'express';
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
 const PORT = 3002;
 
 app.use(express.static('public'));
@@ -11,7 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 const datas = [];
 
 app.get('/', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/home.html`);
+    res.render('home');
+});
+
+app.get('/form', (req, res) => {
+    res.render('form');
 });
 
 app.post('/submit-order', (req, res) => {
@@ -26,17 +32,18 @@ app.post('/submit-order', (req, res) => {
         other: req.body.other,
         message: req.body.message,
         addmail: req.body.addmail,
-        eformat: req.body.eformat
+        eformat: req.body.eformat,
+        timestamp: new Date()
     };
 
     datas.push(data);
     console.log(datas);
 
-    res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+    res.render('confirm', { data });
 });
 
 app.get('/admin', (req, res) => {
-    res.send(datas);
+    res.render('admin', { datas });
 });
 
 app.listen(PORT, () => {
