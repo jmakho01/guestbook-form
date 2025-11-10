@@ -10,6 +10,7 @@
 <body>
 
   <div class="confirm-box">
+    <%- include('partials/nav') %>
     <h1>Thank you for your submission!</h1>
     <hr>
     <p>First Name: <%= data.fname %></p>
@@ -51,7 +52,7 @@
 
     <p>Date Submitted: <%= data.timestamp.toLocaleString() %> </p>
 
-    <a id = "home-button" href = "/" role = "button">Back to Form</a>
+    <a id = "form-button" href = "/form" role = "button">Back to Form</a>
   </div>
 
 </body>
