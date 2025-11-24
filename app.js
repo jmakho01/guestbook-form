@@ -47,6 +47,14 @@ app.post('/submit-order', async (req, res) => {
         const data = req.body;
         console.log('New request submitted:', data);
 
+        // Setting default values to null if no values are given for optional fields
+        data.jobtitle = data.jobtitle || "null";
+        data.company = data.company || "null";
+        data.linkurl = data.linkurl || "null";
+        data.email = data.email || "null";
+        data.message = data.message || "null";
+        data.eformat = data.eformat || "null";
+
         data.addmail = Array.isArray(data.addmail) ? "yes" : "no";
 
         const sql = `INSERT INTO contacts(fname, lname, meet, job, company, linkedin, email, message, maillist, mailformat) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
